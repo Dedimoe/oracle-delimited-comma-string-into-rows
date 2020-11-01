@@ -9,3 +9,18 @@ SELECT trim(regexp_substr(str, '[^,]+', 1, LEVEL)) str
 FROM DATA
 CONNECT BY instr(str, ',', 1, LEVEL - 1) > 0
 ```
+
+Output:
+```
+STR                       
+---------------------------
+aaa                         
+bbb                         
+ccc                         
+ddd                         
+eee                         
+fff                         
+ggg                         
+
+ 7 rows selected 
+```
